@@ -1,4 +1,4 @@
-package reload;
+package hotswap_plugins.reload;
 
 import org.hotswap.agent.annotation.LoadEvent;
 import org.hotswap.agent.annotation.OnClassLoadEvent;

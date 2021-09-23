@@ -1,4 +1,4 @@
-package watch_for_reloads;
+package hotswap_plugins.watch_for_reloads;
 
 import java.io.File;
 import java.io.FileWriter;

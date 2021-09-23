@@ -1,6 +1,5 @@
 package genspark.assignments;
-
-import session.Session;
+import hotswap_plugins.session.Session;
 
 import java.io.IOException;
 
@@ -9,7 +8,7 @@ public interface Assignment {
         if (Session.session == null){
             System.out.println("GUI is not connected!");
         } else {
-            Session.sendMessage(backend.harness.dispatcher(this));
+            //Session.sendMessage(backend.harness.dispatcher(this));
         }
     }
 }

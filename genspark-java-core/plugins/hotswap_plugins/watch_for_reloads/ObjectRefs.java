@@ -1,4 +1,4 @@
-package watch_for_reloads;
+package hotswap_plugins.watch_for_reloads;
 
 import genspark.assignments.section1.*;
 import genspark.assignments.section2.*;
