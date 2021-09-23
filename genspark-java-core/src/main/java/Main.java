@@ -14,7 +14,6 @@ public class Main extends WebSocketServer {
         ObjectRefs.loadObjects();
         String host = "localhost";
         int port = 8887;
-        new AddOne();
         WebSocketServer server = new Main(new InetSocketAddress(host, port));
         //Path reloadDir = Paths.get(System.getProperty("user.dir") + "/reload");
         //File reloadFile = Paths.get(System.getProperty("user.dir") + "/reload/reload.log").toFile();
@@ -27,8 +26,7 @@ public class Main extends WebSocketServer {
     @Override
     public void onOpen(WebSocket conn, ClientHandshake handshake) {
         Session.session = conn;
-        conn.send("{\"type\": \"connection\", \"message\": \"Welcome to the server!\"}"); //This method sends a message to the new client
-        //broadcast( "new connection: " + handshake.getResourceDescriptor() ); //This method sends a message to all clients connected
+        conn.send("{\"type\": \"connection\", \"message\": \"Welcome to the server!\"}");
         System.out.println("new connection to " + conn.getRemoteSocketAddress());
     }
 
@@ -39,12 +37,13 @@ public class Main extends WebSocketServer {
 
     @Override
     public void onMessage(WebSocket conn, String message) {
+        //TODO delete this when releasing app
         System.out.println("received message from "    + conn.getRemoteSocketAddress() + ": " + message);
-        //Session.sendMessage(backend.harness.messageFromGui(message));
+        Session.sendMessage(backend.harness.messageFromGui(message));
     }
 
     @Override
-    public void onMessage( WebSocket conn, ByteBuffer message ) {
+    public void onMessage(WebSocket conn, ByteBuffer message ) {
         System.out.println("received ByteBuffer from "    + conn.getRemoteSocketAddress());
     }
 
@@ -57,7 +56,4 @@ public class Main extends WebSocketServer {
     public void onStart() {
         System.out.println("server started successfully");
     }
-
-
-
 }
