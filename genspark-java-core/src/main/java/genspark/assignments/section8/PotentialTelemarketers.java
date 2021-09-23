@@ -13,11 +13,11 @@ public class PotentialTelemarketers implements Assignment {
         var calls = RecordOfTextsAndCalls.getCalls();
         var texts = RecordOfTextsAndCalls.getTexts();
 
-//        var numbersThatSendOrReceiveTexts =
-//                texts.stream()
-//                        .map(t -> Stream.of(t.getSending(), t.getReceiving()))
-//                        .flatMap(i -> i.collect(Collectors.toList()))
-//                        .collect(Collectors.toSet());
+        var numbersThatSendOrReceiveTexts =
+                texts.stream()
+                        .map(t -> List.of(t.getSending(), t.getReceiving()))
+                        .flatMap(Collection::stream)
+                        .collect(Collectors.toSet());
         var numbersThatReceiveCalls =
                 calls.stream()
                         .map(Call::getReceiving)
@@ -25,16 +25,12 @@ public class PotentialTelemarketers implements Assignment {
         var allCalls =
                 calls.stream()
                         .map(c -> List.of(c.getCalling(), c.getReceiving()))
-                        .flatMap(Collection::stream);
-                        //.collect(Collectors.toSet());
+                        .flatMap(Collection::stream)
+                        .collect(Collectors.toSet());
         return
-                allCalls
-                        .filter(c -> !numbersThatReceiveCalls.contains(c))
+                allCalls.stream()
+                        .filter(c -> !numbersThatReceiveCalls.contains(c) && !numbersThatSendOrReceiveTexts.contains(c))
                         .sorted()
                         .collect(Collectors.joining(" "));
-    }
-
-    public static void main(String[] args) throws IOException {
-        System.out.println(new PotentialTelemarketers().solution());
     }
 }

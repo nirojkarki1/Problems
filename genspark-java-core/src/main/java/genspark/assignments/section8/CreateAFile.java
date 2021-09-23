@@ -8,7 +8,7 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 
 public class CreateAFile implements Assignment {
-    Path filePath = Paths.get(System.getProperty("user.dir") + "\\src\\main\\java\\pyramid\\assignments\\section8\\sample_data.txt");
+    Path filePath = Paths.get(System.getProperty("user.dir") + "\\src\\main\\java\\genspark\\assignments\\section8\\sample_data.txt");
 
     public void createAFile() {
         System.out.println(filePath);
