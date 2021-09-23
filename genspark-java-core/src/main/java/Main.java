@@ -1,12 +1,16 @@
 import genspark.assignments.section1.AddOne;
 import hotswap_plugins.session.Session;
+import hotswap_plugins.watch_for_reloads.FileWatcher;
 import hotswap_plugins.watch_for_reloads.ObjectRefs;
 import org.java_websocket.WebSocket;
 import org.java_websocket.handshake.ClientHandshake;
 import org.java_websocket.server.WebSocketServer;
 
+import java.io.File;
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class Main extends WebSocketServer {
 
@@ -15,9 +19,9 @@ public class Main extends WebSocketServer {
         String host = "localhost";
         int port = 8887;
         WebSocketServer server = new Main(new InetSocketAddress(host, port));
-        //Path reloadDir = Paths.get(System.getProperty("user.dir") + "/reload");
-        //File reloadFile = Paths.get(System.getProperty("user.dir") + "/reload/reload.log").toFile();
-        //new FileWatcher(reloadFile, reloadDir).watch();
+        Path reloadDir = Paths.get(System.getProperty("user.dir") + "/plugins/hotswap_plugins/reload/");
+        File reloadFile = Paths.get(System.getProperty("user.dir") + "/plugins/hotswap_plugins/reload/reload.log").toFile();
+        new FileWatcher(reloadFile, reloadDir).watch();
         server.run();
     }
     public Main(InetSocketAddress address) {

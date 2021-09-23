@@ -36,7 +36,6 @@ public class FileWatcher {
                 Matcher m;
                 Constructor<?> constructorForReloadedClass;
                 Object reloadedObject;
-                AtomicBoolean isLoading = new AtomicBoolean(false);
                 while(true){
                     try {
                         Thread.sleep(100);
