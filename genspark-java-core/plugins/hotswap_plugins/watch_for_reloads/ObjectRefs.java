@@ -100,5 +100,6 @@ public class ObjectRefs {
         new ReverseAStringReduce();
         new SquaringAnArray();
         new SumAnArray();
+        new GoblinAttackZombie();
     }
 }
