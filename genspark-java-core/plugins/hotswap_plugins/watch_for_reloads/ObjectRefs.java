@@ -2,13 +2,12 @@ package hotswap_plugins.watch_for_reloads;
 
 import genspark.assignments.section1.*;
 import genspark.assignments.section2.*;
-import genspark.assignments.section3.*;
 import genspark.assignments.section4.*;
 import genspark.assignments.section5.*;
 import genspark.assignments.section6.*;
-import genspark.assignments.section7.*;
+import genspark.assignments.section3.*;
 import genspark.assignments.section8.*;
-import genspark.assignments.section9.*;
+import genspark.assignments.section7.*;
 
 public class ObjectRefs {
     public static void loadObjects() {
@@ -75,21 +74,14 @@ public class ObjectRefs {
         new SetContainsLetter();
         new SortArrayListAscending();
         new SortArrayListDescending();
-        new Car();
         new Goblin();
-        new MagicalPotion();
-        new MagicalPotionShop();
-        new MaxOverload();
-        new MyClass();
-        new Potion();
-        new World();
-        new YakAttack();
         new Zombie();
         new Animal();
         new Cat();
         new Dog();
-        new TV();
-        new Walking();
+        new Martian();
+        new Human();
+        new Humanoid();
         new DivideByZero();
         new IndexOutBounds();
         new ParsingAnInteger();

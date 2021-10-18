@@ -1,9 +1,10 @@
 package genspark.assignments.section6;
 
 import genspark.assignments.Assignment;
-public class Cat implements Assignment {
-    public String solution() {
-        // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+
+public class Cat extends Animal implements Assignment {
+    @Override
+    public String speak() {
+        return "meow";
     }
 }
