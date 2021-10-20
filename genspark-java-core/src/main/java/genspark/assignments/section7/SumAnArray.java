@@ -1,14 +1,10 @@
 package genspark.assignments.section7;
-import genspark.assignments.Assignment;
 
-import java.util.Arrays;
+import genspark.assignments.Assignment;
 
 public class SumAnArray implements Assignment {
     public int solution(int[] nums) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        if(nums.length == 0) {
-            return 0;
-        }
-        return Arrays.stream(nums).reduce((acc, next) -> acc + next).getAsInt();
+        return 0;
     }
 }

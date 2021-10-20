@@ -15,12 +15,10 @@ public class Goblin implements Assignment{
         this.strength = strength;
     }
 
-    public Zombie attack(Zombie zombie) {
-        zombie.setHealth(zombie.getHealth() + this.strength);
-        return zombie;
-    }
 
     public int getStrength() {
         return strength;
     }
+
+    // ↓↓↓↓ your code goes here ↓↓↓↓
 }
