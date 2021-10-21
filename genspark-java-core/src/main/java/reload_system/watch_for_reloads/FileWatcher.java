@@ -1,4 +1,4 @@
-package hotswap_plugins.watch_for_reloads;
+package reload_system.watch_for_reloads;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -8,7 +8,6 @@ import java.lang.reflect.InvocationTargetException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.Objects;
-import java.util.concurrent.atomic.AtomicBoolean;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;

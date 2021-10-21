@@ -1,4 +1,4 @@
-package hotswap_plugins.session;
+package reload_system.session;
 
 import org.java_websocket.WebSocket;
 
