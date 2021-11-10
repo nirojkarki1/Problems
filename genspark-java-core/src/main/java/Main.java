@@ -18,6 +18,7 @@ public class Main extends WebSocketServer {
         String host = "localhost";
         int port = 8887;
         WebSocketServer server = new Main(new InetSocketAddress(host, port));
+        server.setReuseAddr(true);
         Path reloadDir = Paths.get(System.getProperty("user.dir") + "/src/main/java/reload_system/reload/");
         File reloadFile = Paths.get(System.getProperty("user.dir") + "/src/main/java/reload_system/reload/reload.log").toFile();
         new FileWatcher(reloadFile, reloadDir).watch();

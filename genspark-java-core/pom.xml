@@ -23,7 +23,21 @@
 
     <inceptionYear>2021</inceptionYear>
 
+    <repositories>
+        <repository>
+            <id>repsy</id>
+            <name>My Private Maven Repository on Repsy</name>
+            <url>https://repo.repsy.io/mvn/jacobgood1/genspark</url>
+        </repository>
+    </repositories>
+
     <dependencies>
+        <dependency>
+            <groupId>genspark-backend</groupId>
+            <artifactId>genspark-backend</artifactId>
+            <version>1.2.3</version>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/org.hotswapagent/hotswap-agent-core -->
         <dependency>
             <groupId>org.hotswapagent</groupId>
@@ -40,7 +54,7 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
-            <version>30.1.1-jre</version>
+            <version>31.0.1-jre</version>
         </dependency>
 
         <dependency>
