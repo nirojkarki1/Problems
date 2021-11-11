@@ -40,7 +40,6 @@ public class FileWatcher {
                         Thread.sleep(100);
                         newContent = Files.lines(reloadFile.toPath()).collect(Collectors.joining());
                         if(!newContent.isEmpty()){
-                            System.out.println("message sent");
                             m = redefinedNamePattern.matcher(newContent);
                             if (m.find()){
                                 constructorForReloadedClass = Class.forName(m.group(1)).getConstructor();

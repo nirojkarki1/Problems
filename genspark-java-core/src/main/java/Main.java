@@ -41,8 +41,6 @@ public class Main extends WebSocketServer {
 
     @Override
     public void onMessage(WebSocket conn, String message) {
-        //TODO delete this when releasing app
-        System.out.println("received message from "    + conn.getRemoteSocketAddress() + ": " + message);
         Session.sendMessage(backend.harness.messageFromGui(message));
     }
 
