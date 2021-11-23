@@ -8,6 +8,7 @@ public interface Assignment {
         if (Session.session == null){
             System.out.println("GUI is not connected!");
         } else {
+            System.out.println(this);
             Session.sendMessage(backend.harness.dispatcher(this));
         }
     }

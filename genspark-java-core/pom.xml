@@ -35,7 +35,7 @@
         <dependency>
             <groupId>genspark-backend</groupId>
             <artifactId>genspark-backend</artifactId>
-            <version>1.2.3</version>
+            <version>1.2.5</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.hotswapagent/hotswap-agent-core -->
