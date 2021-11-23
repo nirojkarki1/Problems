@@ -1,4 +1,6 @@
 package genspark.assignments.section8;
 
-public class CreateAFile {
+import genspark.assignments.Assignment;
+
+public class CreateAFile implements Assignment {
 }
