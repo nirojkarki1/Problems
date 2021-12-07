@@ -11,6 +11,7 @@ import genspark.assignments.section7.*;
 
 public class ObjectRefs {
     public static void loadObjects() {
+        new ImplementationStation() {};
         new AddOne();
         new AddTwoTogether();
         new CubeANumber();

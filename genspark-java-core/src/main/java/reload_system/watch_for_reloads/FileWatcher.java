@@ -42,9 +42,12 @@ public class FileWatcher {
                         if(!newContent.isEmpty()){
                             m = redefinedNamePattern.matcher(newContent);
                             if (m.find()){
-                                constructorForReloadedClass = Class.forName(m.group(1)).getConstructor();
-                                reloadedObject = constructorForReloadedClass.newInstance();
-                                reloadedObject.getClass().getMethod("test").invoke(reloadedObject);
+                                var check = Class.forName(m.group(1));
+                                if (!check.isInterface()){
+                                    constructorForReloadedClass = check.getConstructor();
+                                    reloadedObject = constructorForReloadedClass.newInstance();
+                                    reloadedObject.getClass().getMethod("test").invoke(reloadedObject);
+                                }
                             }
                             new FileWriter(reloadFile, false).close();
                         }
