@@ -5,6 +5,9 @@ import genspark.assignments.Assignment;
 public class LesserNumber implements Assignment {
     public int solution(int x, int y) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return 0;
+        if(x<=y)
+            return x;
+        else
+        return y ;
     }
 }

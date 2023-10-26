@@ -5,6 +5,15 @@ import genspark.assignments.Assignment;
 public class ReverseAStringWhileLoop implements Assignment {
     public String solution(String str) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+        StringBuilder sb = new StringBuilder();
+        String reverse="";
+        int length = str.length();
+        int i = length -1;
+        while(i>=0){
+          sb.append(str.charAt(i));
+          i--;
+        }
+        reverse = sb.toString();
+        return reverse;
     }
 }

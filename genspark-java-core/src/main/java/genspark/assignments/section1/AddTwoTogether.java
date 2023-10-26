@@ -5,6 +5,7 @@ import genspark.assignments.Assignment;
 public class AddTwoTogether implements Assignment {
     public int solution(int x, int y){
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return 0;
+        int sum = x + y;
+        return sum;
     }
 }

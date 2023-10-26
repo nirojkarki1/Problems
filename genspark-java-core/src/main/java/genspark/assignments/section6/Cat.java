@@ -4,5 +4,8 @@ import genspark.assignments.Assignment;
 
 public class Cat extends Animal implements Assignment {
     // ↓↓↓↓ your code goes here ↓↓↓↓
-
+    @Override
+    public String speak(){
+        return "meow";
+    }
 }

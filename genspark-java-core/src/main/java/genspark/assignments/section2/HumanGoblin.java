@@ -5,6 +5,9 @@ import genspark.assignments.Assignment;
 public class HumanGoblin implements Assignment {
     public String solution(String str) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+        if(str=="goblin")
+            return "Attack the Goblin!";
+        else
+        return"You aRe one of us!";
     }
 }

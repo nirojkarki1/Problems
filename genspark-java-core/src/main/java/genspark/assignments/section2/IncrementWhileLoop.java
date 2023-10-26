@@ -5,6 +5,11 @@ import genspark.assignments.Assignment;
 public class IncrementWhileLoop implements Assignment {
     public String solution(int from, int to) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+         String string= "";
+        while(from<=to)
+        {
+              from++;
+        }
+        return string;
     }
 }

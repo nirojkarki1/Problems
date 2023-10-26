@@ -6,6 +6,9 @@ import java.util.HashMap;
 public class CreateAHuman implements Assignment {
     public HashMap<String, Object> solution(String name, Long age) {
         // ↓↓↓↓ your code goes here ↓↓↓↓
-        return null;
+         HashMap<String,Object> map = new HashMap<>();
+         map.put("name",name);
+         map.put("age", age);
+        return map;
     }
 }
